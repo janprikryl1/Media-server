@@ -1,0 +1,159 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+    }
+    p{
+      color:black;
+    }
+    button {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+    }
+.form{
+  width: 50%;
+  position: relative;
+  height: 50%;
+  /*overflow: hidden;*/
+}
+.form input{
+  width: 100%;
+  height: 100%;
+  color:#595f6e;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+.form label{
+  position: absolute;
+  bottom: -28px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+.form label::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  /*border-bottom: 3px solid #5fa8d3;*/
+  transform: translate(-100%);
+  transition: transform 0.5s ease;
+}
+.content-name{
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name, .form input:valid + .label-name .content-name{
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+}/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    a{
+        color: white;
+    }
+    h3{
+        color: white;
+    }
+    h2{
+        color:white;
+    }
+    body {
+        background-color: black;
+    }
+    p{
+      color: white;
+    }
+    button {
+      background: green;
+      border: none;
+      color: black;
+
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+    }
+    h1 {
+        color: white;
+    }
+    label{
+        color: white;
+    }
+    .TITLE{
+        animation-name: nadpis; animation-duration: 4s; animation-iteration-count: infinite;
+    }
+    .TITLE:hover{
+        color: red;
+        text-decoration: none;
+    }
+    .form{
+  width: 50%;
+  position: relative;
+  height: 50%;
+  /*overflow: hidden;*/
+}
+.form input{
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background-color: gray;
+}
+.name{
+  position: absolute;
+  bottom: -10px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid yellow;
+}
+.name::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  /*border-bottom: 3px solid #5fa8d3;*/
+  transform: translate(-100%);
+  transition: transform 0.5s ease;
+}
+.content-name{
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name, .form input:valid + .label-name .content-name{
+  transform: translateY(-150%);
+  font-size: 18px;
+  color: #5fa8d3;
+}
+}
+        @keyframes nadpis{
+        0%{color: lime;}
+        50%{color: aqua;}
+        80%{color: yellow;}
+      }
